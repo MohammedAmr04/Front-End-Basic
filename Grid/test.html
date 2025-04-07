@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advanced CSS Grid Example</title>
+    <style>
+      .grid-container {
+        display: grid;
+        width: 600px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+        height: 440px;
+        background-color: #eee;
+        margin: 40px auto;
+      }
+      .item {
+        background-color: red;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item" style="grid-row: span 4">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">1</div>
+      <div class="item" style="grid-row: span 2">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item" style="grid-column: 3 span">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </body>
+</html>

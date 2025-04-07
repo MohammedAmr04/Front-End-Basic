@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* 
+    parent
+    grid-template-column: px % fraction auto repeat(num,size)
+    grid-template-row: px % fraction auto repeat(num,size) minmax(300px ,1fr) => repeat(auto-fill,size)
+    gap: row column
+    grid-template-areas:
+
+    child 
+      grid-area: grid-row-start grid-column-start grid-row-end grid-column-end 
+      grid-row , grid-column
+*/
+
+/* .flex-container {
+  width: 800px;
+  height: 500px;
+  background-color: aqua;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; This centers the items vertically within the container */
+/* } */
+
+/* .flex-item {
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 20px;
+  margin: 10px;
+} */
+
+/* what is it a happend when i move screen */
+/* .grid-container {
+  width: 800px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background-color: rgb(93, 0, 255);
+  margin: 40px auto;
+  gap: 20px 40px;
+}
+
+.grid-item {
+  background-color: rgba(0, 0, 255, 0.5);
+  padding: 20px;
+} */
+
+/* example 2  */
+/* .page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(10, 100px);
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "header header header header header header header header header header"
+    "aside aside aside section section section section section section section"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+header {
+  grid-area: header;
+  background-color: aqua;
+}
+aside {
+  grid-area: aside;
+  background-color: bisque;
+}
+section {
+  grid-area: section;
+  background-color: blue;
+}
+footer {
+  grid-area: footer;
+} */
+/* .page {
+  height: 100vh;
+  display: grid;
+  width: 1000px;
+  grid-template-columns: repeat(10, 100px);
+  grid-template-rows: 50px 1fr 50px;
+}
+header {
+  background-color: aqua;
+   grid-row: 1 / 2;
+  grid-column: 1 /11; 
+  display: grid;
+  grid-area: 1 / 1 / 2 / 11;
+}
+aside {
+  background-color: bisque;
+}
+section {
+  background-color: blue;
+}
+footer {
+  background-color: blanchedalmond;
+} */
+
+.parent {
+  display: grid;
+  width: 540px;
+  height: 320px;
+  margin: 40px auto;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: aqua;
+  gap: 10px;
+}
+.child {
+  background-color: red;
+  padding: 20px;
+}
