@@ -1,0 +1,147 @@
+/* CSS Animation Properties
+The CSS animation property allows you to create animations by combining multiple properties. It has several components, each defining a specific part of the animation process.
+
+The syntax of the animation property is as follows: */
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode;
+Here’s a breakdown of each value:
+
+1. name
+Definition: The name of the animation defined by @keyframes.
+
+Possible Values: Any valid name for a @keyframes animation.
+
+Example: */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* In this example, the name of the animation is fadeIn.
+
+2. duration
+Definition: The total time the animation will take to complete one cycle.
+
+Possible Values:
+
+Time in seconds (s), e.g., 2s.
+
+Time in milliseconds (ms), e.g., 500ms.
+
+Example:
+2s means the animation will take 2 seconds to complete.
+
+3. timing-function
+Definition: Defines the speed curve of the animation (how the animation progresses during its duration).
+
+Possible Values:
+
+linear: Constant speed.
+
+ease: Starts slow, accelerates, and then slows down at the end.
+
+ease-in: Starts slow and speeds up.
+
+ease-out: Starts fast and slows down at the end.
+
+ease-in-out: Starts slow, speeds up in the middle, and slows down at the end.
+
+Example:
+ease-in makes the animation start slowly and then speed up.
+
+4. delay
+Definition: Defines a delay before the animation starts.
+
+Possible Values:
+
+Time in seconds (s), e.g., 1s.
+
+Time in milliseconds (ms), e.g., 200ms.
+
+Example:
+1s means the animation will start after a 1-second delay.
+
+5. iteration-count
+Definition: Defines how many times the animation will play.
+
+Possible Values:
+
+A positive integer: Defines the number of repetitions (e.g., 3, 5).
+
+infinite: The animation will repeat infinitely.
+
+Example:
+3 means the animation will repeat 3 times. infinite makes the animation loop indefinitely.
+
+6. direction
+Definition: Specifies the direction of the animation.
+
+Possible Values:
+
+normal: The animation runs forward (from start to end).
+
+reverse: The animation runs backward (from end to start).
+
+alternate: The animation alternates between forward and backward.
+
+alternate-reverse: Similar to alternate, but starts in reverse direction first.
+
+Example:
+normal makes the animation run from start to end.
+
+7. fill-mode
+Definition: Specifies how the animation's styles are applied before and after the animation runs.
+
+Possible Values:
+
+none: No styles are applied before or after the animation.
+
+forwards: The styles of the last keyframe remain after the animation ends.
+
+backwards: The styles of the first keyframe are applied before the animation starts.
+
+both: Combines both forwards and backwards behaviors.
+
+Example:
+forwards ensures that the animation retains its final state after completion (e.g., opacity: 1).
+
+Example:
+Here is a complete example of how to use the animation property: */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.element {
+  background-color: aqua;
+  width: 200px;
+  margin: 50px auto;
+  height: 200px;
+
+  animation: fadeIn 4s ease-in 1 backwards;
+}
+/* 
+Explanation of the Example:
+
+name: The animation is called fadeIn.
+
+duration: It lasts for 2 seconds.
+
+timing-function: It uses the ease-in timing function (starts slow, then speeds up).
+
+delay: It starts after a 1-second delay.
+
+iteration-count: The animation will repeat 3 times.
+
+direction: It runs in the normal direction (from start to end).
+
+fill-mode: After the animation ends, the element will retain its final state (opacity: 1). */
