@@ -5,8 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/main.css" />
     <title>Animation</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 500px;
+        height: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background-color: #fefefe;
+      }
+      .e,
+      .l {
+        height: 100%;
+        width: 200px;
+        position: relative;
+      }
+      .e {
+        border-bottom: solid 60px black;
+        border-left: solid 60px black;
+        border-top: solid 60px black;
+      }
+      .e::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .l {
+        border-bottom: solid 60px black;
+        border-left: solid 60px black;
+      }
+      .box {
+        background-color: rgb(205, 169, 50);
+        width: 40px;
+        height: 40px;
+        position: absolute;
+      }
+      .l .box {
+        animation: moveL 3s linear infinite;
+        bottom: -50px;
+        right: 10px;
+      }
+      @keyframes moveL {
+        0% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+        35% {
+          transform: translate(-140px, 0);
+        }
+        80% {
+          transform: translate(-140px, -300px);
+          opacity: 1;
+        }
+        95% {
+          transform: translate(-140px, -300px);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="element"></div>
+    <div class="container">
+      <div class="e"><div class="box"></div></div>
+      <div class="l"><div class="box"></div></div>
+    </div>
   </body>
 </html>
