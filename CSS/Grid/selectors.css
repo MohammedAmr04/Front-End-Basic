@@ -1,0 +1,85 @@
+/* 1. Universal Selector - targets all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. Type Selector - targets a specific HTML tag */
+p {
+  color: blue;
+  font-size: 16px;
+}
+
+/* 3. Class Selector - targets elements with a specific class */
+.card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* 4. ID Selector - targets a specific element with an ID */
+#header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 5. Group Selector - targets multiple elements */
+h1,
+h2,
+p {
+  font-family: Arial, sans-serif;
+}
+
+/* 6. Descendant Selector - targets elements inside another element */
+article p {
+  line-height: 1.6;
+}
+
+/* 7. Child Selector - targets direct children only */
+ul > li {
+  list-style-type: square;
+}
+
+/* 8. Adjacent Sibling Selector - targets the next immediate sibling */
+h2 + p {
+  color: gray;
+}
+
+/* 9. General Sibling Selector - targets all following siblings */
+h2 ~ p {
+  color: green;
+}
+
+/* 10. Attribute Selector - targets elements with a specific attribute */
+input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* 11. Pseudo-classes */
+/* Hover - when mouse is over the element */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* First-child - targets the first child of a parent */
+li:first-child {
+  font-weight: bold;
+}
+
+/* nth-child - targets elements by position */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* 12. Pseudo-elements */
+/* ::before - inserts content before the element */
+p::before {
+  content: "👉 ";
+}
+
+/* ::after - inserts content after the element */
+p::after {
+  content: " ✅";
+}
