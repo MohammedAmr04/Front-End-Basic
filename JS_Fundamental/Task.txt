@@ -1,0 +1,73 @@
+🔹 Task 1: Working with Variables & Strings
+
+1. Create two variables named `numberOne` and `numberTwo` using proper JavaScript naming conventions.
+   - `numberOne` should hold the number `10`.
+   - `numberTwo` should hold the number `20`.
+
+2. Perform the following actions:
+   - Print the result `1020` using string concatenation (not template literals).
+   - Print the data type of the result `1020` (also using string concatenation).
+   - Print the result `1020` using template literals.
+   - Print the data type of the result `1020` using template literals.
+   - Print `20` and `10` on two lines using a single `console.log()` statement with string concatenation only (no template literals, and do not use `console.log` more than once).
+
+🔹 Task 2: Output Without Template Literals
+
+Reproduce the following exact output without using template literals:
+
+I'm In
+\\
+Love \\ """ ''' 
+++ With ++
+\"""\"""
+""JavaScript""
+
+
+🔹 Task 3: Use Variables Efficiently
+
+Given:
+
+let a = 21;
+let b = 20;
+
+Use the variables `a` and `b` only once each to produce the following output:
+
+_21_2021_2021_2021_20_
+
+🔹 Task 4: Arithmetic Operators Challenge
+
+Replace the `?` symbols with the correct arithmetic operators to make the final result equal `0`:
+
+console.log(10 ? 20 ? 15 ? 3 ? 190 ? 10 ? 400); // 0
+
+🔹 Task 5: Boolean Values Only – Result: 6
+
+Using only boolean values, print the number `6` in six different ways.
+
+Example:
+
+let num = 3;
+
+// Solution One
+console.log(/* your boolean-based expression */); // 6
+
+// Solution Two
+// ...
+
+🔹 Task 6: Convert and Add – Result: 20
+
+Given:
+
+let num = "10";
+
+Using different methods, convert the string `"10"` into a number and add `10` to it. The final result should be `20`, and it must be of type Number.
+
+Provide at least 4 different solutions.
+
+🔹 Task 7: LeetCode Challenge – Two Sum
+
+1. Solve the "Two Sum" problem on LeetCode:
+   https://leetcode.com/problems/two-sum/description/
+
+2. Take a screenshot of your successful solution.
+
