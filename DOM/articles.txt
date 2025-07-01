@@ -1,0 +1,2 @@
+1- difference between htmlcollection and nodelist
+https://www.freecodecamp.org/news/dom-manipulation-htmlcollection-vs-nodelist/
