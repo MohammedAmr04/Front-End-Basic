@@ -46,6 +46,7 @@ function showPopup(message) {
     popup.remove();
   };
 }
+
 function checkWinner() {
   for (let i = 0; i < winPatterns.length; i++) {
     const [a, b, c] = winPatterns[i];
@@ -54,6 +55,7 @@ function checkWinner() {
     const vc = cells[c].getAttribute("value");
     if (va !== "null" && va === vb && vb === vc) {
       setTimeout(() => showPopup(`${va} wins!`), 10);
+      //remove event
       cells.forEach((cell) =>
         cell.removeEventListener("click", handleCellClick)
       );
@@ -77,30 +79,30 @@ function checkWinner() {
   }
   return false;
 }
-function checkWinner() {
-  for (let pattern of winPatterns) {
-    const [a, b, c] = pattern;
-    const va = cells[a].getAttribute("value");
-    const vb = cells[b].getAttribute("value");
-    const vc = cells[c].getAttribute("value");
-    if (va !== "null" && va === vb && vb === vc) {
-      setTimeout(() => showPopup(`${va} wins!`), 10);
-      cells.forEach((cell) =>
-        cell.removeEventListener("click", handleCellClick)
-      );
-      updateTurnLabelEnd(`${va} wins!`);
-      return true;
-    }
-  }
-  // Check for draw
-  if (cells.every((cell) => cell.getAttribute("value") !== "null")) {
-    setTimeout(() => showPopup("Draw!"), 10);
-    cells.forEach((cell) => cell.removeEventListener("click", handleCellClick));
-    updateTurnLabelEnd("Draw!");
-    return true;
-  }
-  return false;
-}
+// function checkWinner() {
+//   for (let pattern of winPatterns) {
+//     const [a, b, c] = pattern;
+//     const va = cells[a].getAttribute("value");
+//     const vb = cells[b].getAttribute("value");
+//     const vc = cells[c].getAttribute("value");
+//     if (va !== "null" && va === vb && vb === vc) {
+//       setTimeout(() => showPopup(`${va} wins!`), 10);
+//       cells.forEach((cell) =>
+//         cell.removeEventListener("click", handleCellClick)
+//       );
+//       updateTurnLabelEnd(`${va} wins!`);
+//       return true;
+//     }
+//   }
+//   // Check for draw
+//   if (cells.every((cell) => cell.getAttribute("value") !== "null")) {
+//     setTimeout(() => showPopup("Draw!"), 10);
+//     cells.forEach((cell) => cell.removeEventListener("click", handleCellClick));
+//     updateTurnLabelEnd("Draw!");
+//     return true;
+//   }
+//   return false;
+// }
 
 function updateTurnLabelEnd(msg) {
   let turnLabel = document.getElementById("turn-label");
