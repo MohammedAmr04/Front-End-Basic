@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Window Open/Close</title>
+  </head>
+  <body>
+    <button id="openBtn">Open Window</button>
+    <button id="closeBtn">Close Window</button>
+
+    <script>
+      let newWindow;
+
+      document.getElementById("openBtn").onclick = () => {
+        newWindow = window.open(
+          "popup.html",
+          "_blank",
+          "width=500,height=300,left=500,top=100"
+        );
+        console.log("open");
+      };
+
+      document.getElementById("closeBtn").onclick = () => {
+        console.log(newWindow);
+        if (newWindow && !newWindow.closed) {
+          newWindow.close();
+          console.log("Window closed");
+        } else {
+          console.log("No open window to close.");
+        }
+      };
+    </script>
+  </body>
+</html>
