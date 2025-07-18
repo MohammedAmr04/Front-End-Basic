@@ -5,7 +5,11 @@ console.log(`Username: ${username}, Age: ${age}`);
 
 // ==================== 2. Arrow Functions ====================
 const sum = (a, b) => a + b;
+const sum2 = (a, b) => {
+  return a + b;
+};
 console.log("Sum:", sum(5, 3));
+console.log("Sum2:", sum2(5, 3));
 
 // ==================== 3. Template Literals ====================
 const greeting = `Hello, ${username}. You are ${age} years old.`;
@@ -13,7 +17,7 @@ console.log(greeting);
 
 // ==================== 4. Destructuring ====================
 const user = { name: "Ali", job: "Developer" };
-const { name, job } = user;
+let { name, job } = user;
 console.log("Name:", name, "Job:", job);
 
 const numbers = [10, 20, 30];
@@ -23,9 +27,13 @@ console.log("First:", first, "Second:", second, "Third:", third);
 // ==================== 5. Spread & Rest ====================
 // Spread
 const arr1 = [1, 2, 3];
-const arr2 = [...arr1, 4, 5];
-console.log("Spread Array:", arr2);
 
+const arr2 = [...arr1];
+const obj1 = {
+  ...user,
+  age: 99,
+};
+console.log(obj1.age);
 // Rest
 function total(...nums) {
   return nums.reduce((acc, num) => acc + num, 0);
