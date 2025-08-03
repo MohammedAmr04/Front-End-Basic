@@ -1,0 +1,25 @@
+@layer one {
+    h1 {
+        background-color: red;
+    }
+
+}
+
+@layer two {
+    h1 {
+        background-color: blue;
+    }
+}
+
+@layer three {
+    h1 {
+        background-color: green;
+    }
+}
+
+@layer {
+    h1 {
+        background-color: chocolate;
+        color: white
+    }
+}
