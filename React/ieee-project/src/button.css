@@ -1,0 +1,11 @@
+.red {
+    background: red;
+    width: 500px;
+    height: 500px;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
