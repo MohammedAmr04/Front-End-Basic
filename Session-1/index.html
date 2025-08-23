@@ -1,0 +1,129 @@
+<!-- HTML Document Structure -->
+
+<!DOCTYPE html>
+<!-- Defines the document type as HTML5 -->
+
+<html lang="en">
+  <!-- Specifies the document language (English) -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to UTF-8 for better text compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper responsiveness on mobile devices -->
+    <!-- Link Element Overview -->
+
+    <!-- 
+  The <link> element is used to reference external resources.
+  It is self-closing and does not contain content inside.
+  
+  There are two main use cases for the <link> element:
+  1️⃣ Loading external resources needed to render the page (e.g., CSS files).
+  2️⃣ Providing links to related documents (e.g., alternative versions of the page).
+  
+  The <link> element commonly uses:
+  ✅ `href` - Defines the URL of the linked resource.
+  ✅ `rel`  - Defines the relationship between the current document and the linked resource.
+-->
+
+    <!-- Example: Linking an external CSS file to style the page -->
+    <link rel="stylesheet" type="text/css" href="Sample.css" />
+
+    <!-- Example: Linking a website icon (favicon) -->
+    <link rel="icon" type="image/x-icon" href="HTMLBadge.ico" />
+
+    <!-- Example: Providing an alternate version of the page (e.g., a text version) -->
+    <link rel="alternate" type="text/plain" href="TextPage.txt" />
+    <!-- rel Attribute Values and Their Descriptions -->
+
+    <!-- 
+  The `rel` attribute defines the relationship between the current document and the linked resource.
+  Below are some common values for `rel` and their purposes:
+-->
+
+    <!-- 1️⃣ rel="icon" -->
+    <!-- 
+  Loads an icon (favicon) for the page. 
+  The `sizes` attribute can be used to specify different icon sizes.
+  The `type` attribute defines the file type (e.g., "image/x-icon" or "image/png").
+-->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+
+    <!-- 2️⃣ rel="prefetch" -->
+    <!-- 
+  Informs the browser that the external resource *may* be needed later.
+  The browser will load it in the background when possible.
+-->
+    <link rel="prefetch" href="large-image.jpg" />
+
+    <!-- 3️⃣ rel="preload" -->
+    <!-- 
+  Tells the browser that the resource is *definitely* needed soon.
+  It should be loaded as early as possible for better performance.
+-->
+    <link rel="preload" href="styles.css" as="style" />
+
+    <!-- 4️⃣ rel="stylesheet" -->
+    <!-- 
+  Loads an external CSS file to style the page.
+  The `type` attribute is optional (default: "text/css").
+-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Document</title>
+    <!-- Specifies the title of the page, displayed in the browser tab -->
+
+    <!-- 
+      The <title> element can only appear once in the document.
+      If multiple <title> elements exist, the browser will use the first one and ignore the rest.
+    -->
+
+    <!-- 
+      About <meta> tags:
+      Meta tags provide additional information about the page.
+      Example: <meta name="description" content="A brief description of the page">
+      More about meta tags: http://www.html-5.com/metatags
+    -->
+
+    <!-- 
+      JavaScript Loading Behavior:
+      - Normally, when the browser encounters a <script> tag, it loads and executes it immediately.
+      - To change this behavior, you can use:
+        ✅ `async`: Loads and executes the script in parallel while parsing the document.
+        ✅ `defer`: Loads the script in parallel but executes it after the HTML is fully parsed.
+      Example:
+      <script src="scripts/demo.js" defer></script>
+    -->
+    <script></script>
+  </head>
+
+  <body>
+    <!-- HTML Elements and Attributes Overview -->
+
+    <!-- 
+      What is a tag?
+      A tag is a part of an HTML element that defines the type of content.
+      Example: <p> or <div>
+    -->
+
+    <!-- 
+      What is an element?
+      An element consists of:
+      - An opening tag
+      - Content (optional)
+      - A closing tag
+      Example: <p>This is an element</p>
+    -->
+
+    <!-- 
+      What are attributes?
+      Attributes provide extra information about an element and modify its behavior.
+      Example: The lang attribute in <html> specifies the language of the page.
+    -->
+
+    <!-- 
+      What does lang="en" do?
+      - The lang attribute specifies the document language.
+      - It helps browsers, search engines, and screen readers interpret the content correctly.
+    -->
+  </body>
+</html>
