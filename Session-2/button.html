@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons in HTML</title>
+  </head>
+  <body>
+    <!-- Heading -->
+    <h1>Buttons in HTML</h1>
+
+    <!-- Section 1: Basic Buttons -->
+    <h2>1️⃣ Basic Button Types</h2>
+    <button>Click Me</button>
+    <input type="button" value="Click Me" />
+
+    <hr />
+
+    <!-- Section 2: Button Types -->
+    <h2>2️⃣ Button Types</h2>
+    <form method="get" action="#">
+      <!-- Submit Button: Sends form data -->
+      <input type="text" />
+      <button type="submit">Submit Form</button>
+      <input type="button" />
+      <!-- Reset Button: Clears the form fields -->
+      <button type="reset">Reset Form</button>
+
+      <!-- Button with JavaScript action -->
+      <button type="button" onclick="alert('mohammed')">Click Me</button>
+    </form>
+
+    <hr />
+
+    <!-- Section 3: Button Attributes -->
+    <h2>3️⃣ Button Attributes</h2>
+
+    <!-- Disabled button: User cannot click it -->
+    <button disabled>Disabled Button</button>
+
+    <!-- Autofocus button: Focuses automatically when page loads -->
+    <button autofocus>Focused on Page Load</button>
+
+    <hr />
+    <!-- Section 6: Submit Button with Form -->
+    <h2>Submit Button & Form Example</h2>
+    <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <hr />
+
+    <!-- Section 7: Button Inside a Link -->
+    <h2>7️⃣ Button Inside a Link</h2>
+    <a href="https://google.com">
+      <button>Go to Google</button>
+    </a>
+  </body>
+</html>

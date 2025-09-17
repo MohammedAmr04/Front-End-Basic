@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <!-- 
+    1. What is an HTML <form>?
+        The <form> element is used to collect and submit user data.
+        It contains different input fields such as text, email, password, checkboxes, and buttons.
+        Forms interact with the backend (e.g., PHP, Node.js, or Spring Boot in your case) to process data.
+     -->
+
+    <h2>User Registration Form</h2>
+
+    <form
+      id="myForm"
+      action="https://jsonplaceholder.typicode.com/posts"
+      method="post"
+    >
+      <!-- Text input for username -->
+      <!-- required: Makes sure the field is not empty -->
+      <!-- maxlength: Limits the number of characters -->
+      <!-- minlength: Ensures the input has at least a certain number of characters -->
+      <!-- placeholder: Provides a hint about what the user should enter -->
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="us"
+        required
+        maxlength="15"
+        minlength="3"
+        placeholder="Enter your username"
+      />
+      <br /><br />
+
+      <!-- Email input field -->
+      <!-- pattern: Defines a regex pattern to validate email -->
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Enter your email"
+      />
+      <br /><br />
+
+      <!-- Password input field -->
+      <!-- required: Ensures password is entered -->
+      <!-- minlength & maxlength: Limits password length -->
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="6"
+        maxlength="20"
+        placeholder="Enter your password"
+      />
+      <br /><br />
+
+      <!-- Radio buttons for gender selection -->
+      <!-- checked: Pre-selects a default option -->
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+      <br /><br />
+
+      <!-- Checkboxes for hobbies selection -->
+      <label>Hobbies:</label>
+      <input type="checkbox" id="sports" name="hobbies" value="sports" />
+      <label for="sports">Sports</label>
+      <input type="checkbox" id="music" name="hobbies" value="music" />
+      <label for="music">Music</label>
+      <input type="checkbox" id="reading" name="hobbies" value="reading" />
+      <label for="reading">Reading</label>
+      <br /><br />
+
+      <!-- Dropdown list for country selection -->
+      <!-- selected: Sets a default selected option -->
+
+      <!-- Multi-line text area for additional comments -->
+      <label for="bio">Short Bio:</label><br />
+      <textarea
+        id="bio"
+        name="bio"
+        rows="4"
+        cols="30"
+        placeholder="Tell us about yourself"
+      ></textarea>
+      <br /><br />
+
+      <!-- File input -->
+      <!-- accept: Specifies allowed file types -->
+      <!-- multiple: Allows selecting multiple files -->
+      <label for="profilePic">Upload Profile Picture:</label>
+      <input type="file" id="profilePic" name="profilePic" accept="*/.pdf" />
+      <br /><br />
+
+      <!-- Number input -->
+      <!-- min & max: Restrict the number range -->
+      <!-- step: Defines the step value (e.g., increments of 1, 0.1, etc.) -->
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="18"
+        max="99"
+        step="10"
+        required
+      />
+      <br /><br />
+      <!-- URL input field -->
+      <label for="website">Your Website:</label>
+      <input
+        type="url"
+        id="website"
+        name="website"
+        placeholder="https://example.com"
+      />
+      <br /><br />
+
+      <!-- Date input field -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" />
+      <br /><br />
+
+      <!-- Range input field -->
+      <!-- step: Defines the increment interval -->
+      <label for="satisfaction">Satisfaction Level:</label>
+      <input
+        type="range"
+        id="satisfaction"
+        name="satisfaction"
+        min="1"
+        max="1"
+        step="5"
+      />
+      <br /><br />
+
+      <!-- Submit button to send form data -->
+      <input type="submit" value="Register" />
+
+      <!-- Reset button to clear the form -->
+      <input type="reset" value="Reset" />
+    </form>
+
+    <!-- <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from reloading the page
+          let formData = new FormData(this);
+          console.log(Object.fromEntries(formData)); // Display form data in console
+        });
+    </script> -->
+    https://jsonplaceholder.typicode.com/posts?email=albrazily97%40gmail.com&password=16613asasa&gender=male&country=usa&bio=&profilePic=&age=21&website=&dob=&satisfaction=6
+  </body>
+</html>
