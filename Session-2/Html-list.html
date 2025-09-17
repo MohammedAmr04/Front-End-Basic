@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Lists</title>
+  </head>
+  <body>
+    <!-- 
+    1. Introduction to Lists in HTML
+    Lists help organize content in a structured way.
+    Three main types of lists:
+    - Ordered Lists (<ol>) – Numbered lists.
+    - Unordered Lists (<ul>) – Bulleted lists.
+    - Definition Lists (<dl>) – Term and description lists.
+    -->
+
+    <!-- Ordered Lists -->
+    <!-- Used for step-by-step instructions or rankings. -->
+    <!-- The start attribute can be used to set the first number in the list. -->
+    <h2>Ordered List Example</h2>
+    <ol start="3">
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+    <!-- Default numbering is 1, 2, 3…, but it can be customized using the type attribute (e.g., A, a, I, i). -->
+    <ol type="i">
+      <li>Item A</li>
+      <li>Item B</li>
+      <li>Item C</li>
+    </ol>
+
+    <!-- Unordered Lists -->
+    <!-- Used for items that do not have a specific order. -->
+    <h2>Unordered List Example</h2>
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+    <!-- The type attribute can be set to:
+      - "circle" for a circle bullet.
+      - "square" for a square bullet.
+      - "disc" (default) for a filled bullet.
+      - "none" for no bullets.
+    -->
+    <ul type="square">
+      <li>Square bullet</li>
+    </ul>
+    <ul type="circle">
+      <li>Circle bullet</li>
+    </ul>
+    <ul style="list-style-type: none">
+      <li>No bullet</li>
+    </ul>
+
+    <!-- Definition Lists -->
+    <!-- Used for defining terms and their descriptions. -->
+    <h2>Definition List Example</h2>
+    <dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <!-- Nested Lists -->
+    <!-- Lists can be nested inside each other. -->
+    <h2>Nested List Example</h2>
+    <ul>
+      <li>
+        Fruits
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Orange</li>
+        </ul>
+      </li>
+      <li>
+        Vegetables
+        <ul>
+          <li>Carrot</li>
+          <li>Broccoli</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        fruite
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Orange</li>
+        </ul>
+      </li>
+      <li>
+        vegetables
+        <ul>
+          <li>Carrot</li>
+          <li>Broccoli</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
