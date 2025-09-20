@@ -1,0 +1,50 @@
+/*  1️⃣ Introduction: Why Are Colors Important in Web Design?
+    Colors are not just for aesthetics; they influence user experience, emotions, and accessibility.
+
+    🔴 Red is used for alerts and warnings (e.g., error messages 🚨).
+    🔵 Blue conveys trust and stability (e.g., Facebook’s color 💙).
+    🟢 Green is associated with success and confirmation (e.g., WhatsApp messages ✅). 
+ */
+/* 🎨 2️⃣ Ways to Define Colors in CSS */
+
+/* 🔹 (1) Color Names 
+   ✅ CSS supports 140+ predefined color names. */
+
+h1 {
+  color: blue; /* Example: Blue text */
+}
+/* 📝 Pros: Easy to remember and use.
+   ⚠️ Cons: Limited color choices. */
+
+/* 🔹 (2) RGB & RGBA Colors 
+   📌 RGB (Red, Green, Blue) values range from 0 to 255.
+   📌 RGBA includes an Alpha channel (0 = transparent, 1 = opaque). */
+
+p {
+  color: rgb(255, 0, 0); /* Red */
+  background-color: rgba(0, 0, 255, 0.5); /* Semi-transparent Blue */
+}
+/* 📝 Pros: Precise color control.
+   ⚠️ Cons: Hard to memorize exact values. */
+
+/* 🔹 (3) HEX Colors 
+   📌 HEX uses six characters (#RRGGBB) or shorthand three characters (#RGB).
+   📌 Supports transparency with eight characters (#RRGGBBAA). */
+
+button {
+  background-color: #ff5733; /* Orange */
+  color: #ffffff; /* White */
+}
+/* 📝 Pros: Most widely used in professional designs.
+   ⚠️ Cons: Harder to read compared to RGB. */
+
+/* 🔹 (4) HSL & HSLA Colors 
+   📌 HSL (Hue, Saturation, Lightness) makes color adjustments easier.
+   📌 HSLA adds transparency (Alpha). */
+
+div {
+  color: hsl(200, 100%, 50%); /* Sky Blue */
+  background-color: hsla(30, 100%, 50%, 0.3); /* Semi-transparent Orange */
+}
+/* 📝 Pros: Easy to adjust brightness and saturation.
+   ⚠️ Cons: Less common than RGB & HEX. */

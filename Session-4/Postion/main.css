@@ -1,0 +1,85 @@
+/* 1️⃣ CSS Positioning System
+    🔹 position: static (Default Positioning)
+    📌 Elements appear in the normal document flow.
+    📌 No extra positioning is applied.
+ */
+
+p {
+  position: static;
+}
+/* ✅ Pros: No unexpected layout shifts.
+⚠️ Cons: Can't move elements freely.
+
+🔹 position: relative
+📌 Moves the element relative to its original position without affecting other elements. */
+
+.box {
+  position: relative;
+  top: 20px; /* Moves the box 20px down */
+  left: 10px; /* Moves the box 10px to the right */
+}
+/* ✅ Pros: Easy to adjust element position.
+⚠️ Cons: Still affects normal document flow.
+
+🔹 position: absolute
+📌 Moves the element relative to the nearest positioned ancestor (relative, absolute, fixed).
+📌 If no positioned ancestor exists, it moves relative to <html>. */
+
+.container {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}
+/* ✅ Pros: Great for overlays and floating elements.
+⚠️ Cons: Removed from the document flow, so it can overlap content.
+
+🔹 position: fixed
+📌 The element stays fixed on the screen even when the page is scrolled. */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+/* ✅ Pros: Useful for sticky headers, floating buttons, or notifications.
+⚠️ Cons: Can overlap content if not handled properly.
+
+🔹 position: sticky
+📌 The element behaves like relative until the user scrolls to a certain point, then it sticks.
+ */
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+}
+/* ✅ Pros: Great for sticky navigation and table headers.
+⚠️ Cons: Not fully supported in some older browsers.
+
+2️⃣ z-index - Controlling Layer Order
+📌 The z-index property controls which elements appear in front or behind others.
+📌 Works only on elements with position: relative, absolute, fixed, or sticky. */
+
+.box1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Higher value = appears on top */
+  background-color: red;
+}
+
+.box2 {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 1; /* Lower value = appears behind */
+  background-color: blue;
+}
+/* ✅ Higher z-index = Element moves to the front.
+✅ Lower z-index = Element moves behind others. */

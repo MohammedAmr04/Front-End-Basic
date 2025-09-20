@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Hide Elements</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .box {
+        width: 250px;
+        padding: 15px;
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      /* 1️⃣ opacity: 0 */
+      .opacity {
+        opacity: 0; /* Element is still there but fully transparent */
+      }
+
+      /* 2️⃣ visibility: hidden */
+      .visibility {
+        visibility: hidden; /* Element is hidden but still takes up space */
+      }
+
+      /* 3️⃣ display: none */
+      .display {
+        display: none; /* Element is completely removed from the layout */
+      }
+      .flex {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hiding Elements in CSS</h1>
+    <div class="container">
+      <h2>1️⃣ opacity: 0</h2>
+      <div class="flex">
+        <div class="box opacity">I am invisible but still here!</div>
+        <p>
+          ⚠️ The element is still in the layout, and you can interact with it.
+        </p>
+      </div>
+
+      <h2>2️⃣ visibility: hidden</h2>
+      <div class="flex">
+        <div class="box visibility">I am hidden but still taking up space!</div>
+        <p>⚠️ The element is hidden, but its space remains.</p>
+      </div>
+      <h2>3️⃣ display: none</h2>
+      <div class="box display">I am completely removed!</div>
+      <p>✅ The element is gone, and it does not take up any space.</p>
+    </div>
+  </body>
+</html>

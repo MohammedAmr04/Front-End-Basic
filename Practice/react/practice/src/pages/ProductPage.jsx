@@ -9,6 +9,8 @@ const ProductPage = () => {
         {" "}
         <ul className="bg-teal-400 ">
           <li>
+            {/* products/1 */}
+            {/*  /1 */}
             <Link to={"1"}> product 1 </Link>
             <Link to={"2"}> product 2</Link>
             <Link to={"3"}> product 3 </Link>

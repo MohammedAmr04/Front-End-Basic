@@ -1,0 +1,54 @@
+/* 1️⃣ Basic Syntax of Transition
+A transition consists of four main parts:
+
+*/
+selector {
+  transition: property duration timing-function delay;
+}
+/*
+property → What to animate (e.g., color, background-color, transform...)
+duration → How long the animation takes (e.g., 0.5s, 1s)
+timing-function → The speed curve of the animation (ease, linear, ease-in, ease-out, ease-in-out)
+delay (optional) → Time before the transition starts (0s, 1s, etc.) 
+*/
+
+/* 2️⃣ Example: Basic Transition on Background Color
+This example makes the background color transition smoothly over 0.5s. */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  margin: 50px auto;
+  transition: background-color 0.5s ease;
+}
+
+.box:hover {
+  background-color: red;
+}
+
+/* 3️⃣ Transitioning Multiple Properties
+You can animate multiple CSS properties at the same time. */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transform: scale(1);
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.box:hover {
+  background-color: red;
+  transform: scale(1.2); /* Enlarges the box */
+}
+/* 4️⃣ Understanding Timing Functions
+The timing-function controls how the animation progresses:
+
+Value	Effect
+linear	Moves at a constant speed
+ease	Starts slow, speeds up, then slows down (default)
+ease-in	Starts slow, then speeds up
+ease-out	Starts fast, then slows down
+ease-in-out	Slow start and end, faster in the middle
+ */

@@ -1,0 +1,39 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.logo {
+  float: left;
+  padding: 5px 10px;
+}
+ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  display: inline-block;
+  padding: 5px 10px;
+  transition: background-color 2s linear, opacity 2s linear;
+}
+li:hover {
+  background-color: blue;
+}
+.goal:hover .mega {
+  opacity: 1;
+}
+.mega {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  position: absolute;
+  opacity: 0;
+  top: 50px;
+  left: 50%;
+  transition: opacity 2s linear;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
