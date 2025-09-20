@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: lightgray;
+        padding: 10px;
+        top: 200px;
+        left: 20px;
+        border: 2px solid black;
+      }
+
+      .absolute-box {
+        position: absolute;
+        right: 50px;
+        bottom: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px;
+      }
+
+      .fixed-box {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: blue;
+        color: white;
+        padding: 5px;
+      }
+
+      .sticky-box {
+        position: sticky;
+        top: 0;
+        background-color: yellow;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sticky-box">I am Sticky</div>
+
+    <div class="container">
+      <p>This is a relative container.</p>
+      <div class="absolute-box">Absolute</div>
+    </div>
+
+    <div class="fixed-box">Fixed</div>
+
+    <p style="height: 200vh">Scroll down to see the effect.</p>
+  </body>
+</html>

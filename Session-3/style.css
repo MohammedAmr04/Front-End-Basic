@@ -1,0 +1,26 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.image {
+  float: left; /* يجعل الصور تتحاذى بجانب بعضها */
+  margin-right: 10px; /* إضافة مسافة بين الصور */
+  border-radius: 8px;
+  width: 400px;
+}
+
+/* إزالة التأثير العائم بعد الصور */
+.clear {
+  clear: both;
+}
+
+/* فقرة النص */
+.text {
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #f4f4f4;
+  padding: 10px;
+}

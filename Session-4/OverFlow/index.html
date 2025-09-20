@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Overflow Examples</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .box {
+        width: 250px;
+        height: 100px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #333;
+        background-color: white;
+        overflow: visible; /* Default */
+      }
+
+      /* 1️⃣ overflow: visible (Default) */
+      .visible {
+        overflow: visible;
+        border-color: blue;
+      }
+
+      /* 2️⃣ overflow: hidden */
+      .hidden {
+        overflow: hidden;
+        border-color: red;
+      }
+
+      /* 3️⃣ overflow: scroll */
+      .scroll {
+        overflow: scroll;
+        border-color: green;
+      }
+
+      /* 4️⃣ overflow: auto */
+      .auto {
+        overflow: auto;
+        border-color: orange;
+      }
+
+      /* 5️⃣ overflow-x & overflow-y */
+      .overflow-x {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        border-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Overflow Examples</h1>
+    <div class="container">
+      <h2>1️⃣ overflow: visible (Default)</h2>
+      <div class="box visible">
+        This text overflows outside the box, but it remains visible.
+      </div>
+
+      <h2>2️⃣ overflow: hidden</h2>
+      <div class="box hidden">
+        This text is too long and will be clipped, so you won't see the This
+        text is too long and will be clipped, so you won't see the This text is
+        too long and will be clipped, so you won't see the This text is too long
+        and will be clipped, so you won't see the This text is too long and will
+        be clipped, so you won't see the This text is too long and will be
+        clipped, so you won't see the This text is too long and will be clipped,
+        so you won't see the This text is too long and will be clipped, so you
+        won't see the This text is too long and will be clipped, so you won't
+        see the This text is too long and will be clipped, so you won't see the
+        overflowing part.
+      </div>
+
+      <h2>3️⃣ overflow: scroll</h2>
+      <div class="box scroll">
+        This is a long text that needs scrolling. You can now scroll to see the
+        hidden content. More text to make sure the scroll works properly. hidden
+        content. More text to make sure the scroll works properly. hidden
+        content. More text to make sure the scroll works properly. hidden
+        content. More text to make sure the scroll works properly. hidden
+        content. More text to make sure the scroll works properly. hidden
+        content. More text to make sure the scroll works properly.
+      </div>
+
+      <h2>4️⃣ overflow: auto</h2>
+      <div class="box auto">
+        This is a long text that will create a scrollbar only if needed. Try
+        This is a long text that will create a scrollbar only if needed. Try
+        This is a long text that will create a scrollbar only if needed. Try
+        This is a long text that will create a scrollbar only if needed. Try
+        This is a long text that will create a scrollbar only if needed. Try
+        This is a long text that will create a scrollbar only if needed. Try
+        This is a long text that will create a scrollbar only if needed. Try
+        resizing the box!
+      </div>
+
+      <h2>5️⃣ overflow-x: scroll (Horizontal Scroll Only)</h2>
+      <div class="box overflow-x">
+        This is a long line that will only scroll horizontally without wrapping.
+        This is a long line that will only scroll horizontally without wrapping.
+        This is a long line that will only scroll horizontally without wrapping.
+        This is a long line that will only scroll horizontally without wrapping.
+        This is a long line that will only scroll horizontally without wrapping.
+        This is a long line that will only scroll horizontally without wrapping.
+        This is a long line that will only scroll horizontally without wrapping.
+        This is a long line that will only scroll horizontally without wrapping.
+        This is a long line that will only scroll horizontally without wrapping.
+      </div>
+    </div>
+  </body>
+</html>
